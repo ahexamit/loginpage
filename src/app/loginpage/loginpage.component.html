@@ -1,0 +1,114 @@
+<section class="vh-100" style="background-color: #508bfc">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-2-strong" style="border-radius: 1rem">
+          <div class="card-body p-5 text-center">
+            <h3 class="mb-5">Login</h3>
+            <form [formGroup]="loginForm">
+              <div class="form-outline mb-4">
+                <label class="form-label" for="typeEmailX-2">Email</label>
+
+                <input
+                  type="email"
+                  id="typeEmailX-2"
+                  class="form-control form-control-lg"
+                  formControlName="email"
+                  [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
+                />
+                <div
+                  *ngIf="submitted && f['email'].errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f['email'].errors['required']">
+                    Email is required
+                  </div>
+                  <div *ngIf="f['email'].errors['email']">
+                    Email must be a valid email address
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-outline mb-4">
+                <label class="form-label" for="typePasswordX-2">Password</label>
+
+                <input
+                  type="password"
+                  id="typePasswordX-2"
+                  class="form-control form-control-lg"
+                  formControlName="password"
+                  [ngClass]="{
+                    'is-invalid': submitted && f['password'].errors
+                  }"
+                />
+                <div
+                  *ngIf="submitted && f['password'].errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f['password'].errors['required']">
+                    Password is required
+                  </div>
+                  <div *ngIf="f['password'].errors['minlength']">
+                    Password must be at least 6 characters
+                  </div>
+                  <div *ngIf="f['password'].errors['maxlength']">
+                    Username must not exceed 40 characters
+                  </div>
+                </div>
+              </div>
+
+              <!-- Checkbox -->
+              <!-- <div class="form-check d-flex justify-content-start mb-4">
+                <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+                <label class="form-check-label" for="form1Example3"> Remember password </label>
+              </div> -->
+
+              <button
+                class="btn btn-primary btn-lg btn-block"
+                type="submit"
+                (click)="submit()"
+              >
+                Login
+              </button>
+            </form>
+            <hr class="my-4" />
+            <div class="card-block d-flex justify-content-center">
+              <button>
+                <span class="fab fa-facebook"></span>
+                <asl-google-signin-button
+                  >
+                ></asl-google-signin-button>
+              </button>
+
+              <button
+                class="btn btn-social-icon btn-facebook mx-1"
+                (click)="signInWithFB()"
+              >
+                <span class="fab fa-facebook"></span>
+              </button>
+            </div>
+
+            <!-- 
+            <button
+              class="btn btn-lg btn-block btn-primary mb-2"
+              style="background-color: #dd4b39"
+              type="submit"
+              
+            >
+             Sign in with google 
+            </button>
+            <button
+              class="btn btn-lg btn-block btn-primary mb-2"
+              style="background-color: #3b5998"
+              type="submit"
+              (click)="signInWithFB()"
+            >
+              <i class="fab fa-facebook-f me-2"></i>Sign in with facebook
+            </button>
+            <asl-google-signin-button class="mx-5"></asl-google-signin-button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
