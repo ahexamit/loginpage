@@ -1,0 +1,25 @@
+<div class="mt-4 mb-4">
+    <mat-form-field appearance="fill">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      
+
+</div>
+  <div class="mt-4">
+    <select>
+        <option>CST</option>
+        <option>PST</option>
+        <option>IST</option>
+
+    </select>
+  </div>
+
+  <!-- <div>
+    <input type="date" (change)="onchangefunction($event)">
+  </div>
+  <P>{{data1}}</P> -->
+
+

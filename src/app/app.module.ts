@@ -5,22 +5,38 @@ import {
   SocialLoginModule,
 } from '@abacritt/angularx-social-login';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
+import { DateComponent } from './date/date.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDatepickerModule} from '@angular/material/datepicker'
+import { MatNativeDateModule } from '@angular/material/core';
+import {HttpClientModule} from '@angular/common/http';
+import { MaterialExampleModule } from 'src/material.module';
+
 
 @NgModule({
-  declarations: [AppComponent, LoginpageComponent],
+  declarations: [AppComponent, LoginpageComponent, DateComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
     SocialLoginModule,
     FontAwesomeModule,
+    BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    HttpClientModule,
+    MaterialExampleModule
+
+    
+   
   ],
   providers: [
     {
