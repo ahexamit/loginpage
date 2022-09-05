@@ -18,6 +18,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker'
 import { MatNativeDateModule } from '@angular/material/core';
 import {HttpClientModule} from '@angular/common/http';
 import { MaterialExampleModule } from 'src/material.module';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { MaterialExampleModule } from 'src/material.module';
     MatDatepickerModule,
     MatNativeDateModule,
     HttpClientModule,
-    MaterialExampleModule
+    MaterialExampleModule,
+    MatInputModule
 
     
    
