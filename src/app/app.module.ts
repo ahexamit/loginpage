@@ -1,44 +1,23 @@
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { shareModule } from './common/share.module';
+import { HomeComponent } from './home/home.component';
 import {
   FacebookLoginProvider,
   GoogleLoginProvider,
   SocialAuthServiceConfig,
   SocialLoginModule,
 } from '@abacritt/angularx-social-login';
-import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { LoginpageComponent } from './loginpage/loginpage.component';
-import { DateComponent } from './date/date.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatDatepickerModule} from '@angular/material/datepicker'
-import { MatNativeDateModule } from '@angular/material/core';
-import {HttpClientModule} from '@angular/common/http';
-import { MaterialExampleModule } from 'src/material.module';
-import { MatInputModule } from '@angular/material/input';
-
-
+import { SharedService } from './services/shared.service';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
-  declarations: [AppComponent, LoginpageComponent, DateComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-    FormsModule,
-    SocialLoginModule,
-    FontAwesomeModule,
-    BrowserAnimationsModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    HttpClientModule,
-    MaterialExampleModule,
-    MatInputModule
-
-    
-   
+  declarations: [AppComponent, HomeComponent],
+  imports: [BrowserModule, AppRoutingModule, 
+    BrowserAnimationsModule,HttpClientModule
   ],
   providers: [
     {
@@ -56,6 +35,7 @@ import { MatInputModule } from '@angular/material/input';
             id: FacebookLoginProvider.PROVIDER_ID,
             provider: new FacebookLoginProvider('561602290896109'),
           },
+          SharedService
         ],
         // onError: (err) => {
         //   console.error(err);
