@@ -16,8 +16,11 @@ import { SharedService } from './services/shared.service';
 import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [AppComponent, HomeComponent],
-  imports: [BrowserModule, AppRoutingModule, 
-    BrowserAnimationsModule,HttpClientModule
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
   ],
   providers: [
     {
@@ -35,7 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
             id: FacebookLoginProvider.PROVIDER_ID,
             provider: new FacebookLoginProvider('561602290896109'),
           },
-          SharedService
+          SharedService,
         ],
         // onError: (err) => {
         //   console.error(err);
