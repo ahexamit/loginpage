@@ -4,8 +4,8 @@ import { ParentComponent } from './parent/parent.component';
 import { PipesComponent } from './pipes/pipes.component';
 
 const routes: Routes = [
-  // {path:'' , component:PipesComponent},
-  { path: '', component: ParentComponent },
+  {path:'' , component:PipesComponent},
+  // { path: '', component: ParentComponent },
 ];
 
 @NgModule({

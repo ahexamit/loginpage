@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'parent',
+    path: 'pipes',
     loadChildren: () =>
       import('./common/share.module').then((m) => m.shareModule),
   },

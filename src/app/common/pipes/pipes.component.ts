@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pipes.component.css']
 })
 export class PipesComponent implements OnInit {
+  public filterString:string='';
 public data:any =[
   {
  name:'amit',
@@ -21,9 +22,11 @@ public data:any =[
  }
 
 ]
-  constructor() { }
+  constructor() { 
+  }
 
-  ngOnInit(): void {
+  ngOnInit() {
+
   }
 
 }

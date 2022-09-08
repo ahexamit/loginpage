@@ -1,7 +1,14 @@
+
+<div class="row m-4">
+    <div class="col-md-6">
+        <input [(ngModel)]="filterString">
+    </div>
+
+</div>
 <div class="row">
     <div class="col-md-12 my-4 p-5">
-        <div class="my-2" *ngFor="let user of data">
-            <div >Name:{{user.name | uppercase}}</div>
+        <div class="my-2" *ngFor="let user of data | filter:filterString">
+            <div >Name:{{user.name | uppercase | short}}</div>
             <div>DOB:{{user.dob |date:'long'}}</div>
         </div>
     </div>

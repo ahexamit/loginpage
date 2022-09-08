@@ -18,9 +18,11 @@ import { CommonRoutingModule } from './common-routing.module';
 import { SocialLoginModule } from '@abacritt/angularx-social-login';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './parent/child/child.component';
+import { ShortPipe } from '../angularPipes/transform.pipe';
+import { FilterPipe } from '../angularPipes/filter.pipe';
 
 @NgModule({
-  declarations: [DateComponent, PipesComponent, LoginpageComponent, ParentComponent, ChildComponent],
+  declarations: [DateComponent, PipesComponent, LoginpageComponent, ParentComponent, ChildComponent ,ShortPipe,FilterPipe],
   imports: [
     ReactiveFormsModule,
     FormsModule,

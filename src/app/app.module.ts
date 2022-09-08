@@ -15,12 +15,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedService } from './services/shared.service';
 import { HttpClientModule } from '@angular/common/http';
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+
   ],
   providers: [
     {
